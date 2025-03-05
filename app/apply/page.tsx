@@ -59,6 +59,9 @@ export default function Page() {
 
   const [isLoaing, setIsLoading] = useState(false);
 
+  const [v1, setV1] = useState<string>("");
+  const [v2, setV2] = useState<string>("");
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       {!submitted ? (
@@ -167,6 +170,7 @@ export default function Page() {
           name="section"
           labelPlacement="outside"
           placeholder="select your section"
+          value={v1}
         >
           {sections.map((sec) => (
             <SelectItem key={sec.key}>{sec.label}</SelectItem>
@@ -224,8 +228,9 @@ export default function Page() {
           labelPlacement="outside"
           placeholder="select vertical-1"
           name="vone"
+          onChange={(e) => setV1(e.target.value)}
         >
-          {verticals.map((ver) => (
+          {verticals.filter(ver => ver.key !== v2).map((ver) => (
             <SelectItem key={ver.key}>{ver.label}</SelectItem>
           ))}
         </Select>
@@ -236,9 +241,10 @@ export default function Page() {
           labelPlacement="outside"
           placeholder="select vertical-2"
           name="vtwo"
+          onChange={(e) => setV2(e.target.value)}
         >
-          {verticals.map((sec) => (
-            <SelectItem key={sec.key}>{sec.label}</SelectItem>
+          {verticals.filter(ver => ver.key !== v1).map(ver => (
+            <SelectItem key={ver.key}>{ver.label}</SelectItem>
           ))}
         </Select>
 
