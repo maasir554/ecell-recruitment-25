@@ -67,7 +67,7 @@ export default function RootLayout({
                   <span className="gap-1">
                     <p className="font-bold text-md">Entrepreneurship Cell</p>
                     <p className="text-xs text-neutral-200">
-                      ROLTA Incubation Centre
+                      ROLTA Incubation Center
                     </p>
                     <p className="text-xs text-neutral-200">MANIT, Bhopal</p>
                   </span>
