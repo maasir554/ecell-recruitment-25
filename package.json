@@ -29,6 +29,7 @@
   "@supabase/supabase-js": "^2.49.1",
   "clsx": "^2.1.1",
   "framer-motion": "11.13.1",
+  "googleapis": "^146.0.0",
   "intl-messageformat": "^10.5.0",
   "mini-svg-data-uri": "^1.4.4",
   "motion": "^12.4.10",

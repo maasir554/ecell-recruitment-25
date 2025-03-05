@@ -93,7 +93,8 @@ export default function Page() {
           const form = evt.currentTarget;
           const formData = Object.fromEntries(new FormData(form));
 
-          if (formData.isfr == null) formData.isfr = "false";
+          formData["isfr"] = isFr ? "Yes" : "No";
+
           setSubmitted(formData);
           console.log(formData);
 
@@ -107,7 +108,20 @@ export default function Page() {
                 .insert([formData])
                 .select();
 
-              console.log(data, error);
+                 // Submit to Google Sheets via API route
+                const response = await fetch('/api/google-registeration', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(formData),
+                });
+
+                if (!response.ok) {
+                  throw new Error('Failed to submit to Google Sheets');
+                }
+
+                console.log(data, error);
               setIsLoading(false);
 
               if (error === null) {
@@ -259,10 +273,9 @@ export default function Page() {
         </div>
 
         <Checkbox
+          name="isfr"
           isSelected={isFr}
           onValueChange={setisFr}
-          value={isFr !== null ? (isFr ? "true" : "false") : "false"}
-          name="isfr"
         >
           <span className="text-sm text-default-500">
             {`I was a Fresher's Representative for E-Summit '25`}
@@ -287,6 +300,7 @@ export default function Page() {
           name="skills"
           labelPlacement="outside"
           placeholder="Write in brief about your skills. for example: communication skills, technical skills, etc."
+          
         />
 
         <Textarea
