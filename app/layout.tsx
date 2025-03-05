@@ -78,21 +78,21 @@ export default function RootLayout({
                   <h3 className="font-semibold text-sm">For queries:</h3>
                   <div className="flex flex-col gap-1 text-xs text-neutral-400">
                     <span>
-                      <span>Person One: </span>{" "}
+                      <span>Muskan Yadav: </span>{" "}
                       <Link
                         className="text-xs text-neutral-600"
                         href="tel:+91 000 000 0000"
                       >
-                        +91 000 000 0000
+                        {`+91 72238 41399`}
                       </Link>
                     </span>
                     <span>
-                      <span>Person Two: </span>{" "}
+                      <span>Sannidhya Srivastave: </span>{" "}
                       <Link
                         className="text-xs text-neutral-600"
                         href="tel:+91 000 000 0000"
                       >
-                        +91 000 000 0000
+                       {`+91 76074 76106`}
                       </Link>
                     </span>
                   </div>
