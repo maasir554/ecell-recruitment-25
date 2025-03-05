@@ -50,7 +50,7 @@ export const Navbar = () => {
             />
             <span>
               <p className="font-bold text-inherit">Entrepreneurship Cell</p>
-              <p className="text-xs text-neutral-200">NIT Bhopal</p>
+              <p className="text-xs text-neutral-200">NIT Bhopal | Recruitment '25</p>
             </span>
           </NextLink>
         </NavbarBrand>
@@ -117,6 +117,9 @@ export const Navbar = () => {
           ))}
 
         <div className="w-full flex items-center justify-center gap-6 h-[100px]" >
+          <Link isExternal aria-label="Linkedin" href={siteConfig.links.linkedin}>
+            <FaLinkedin className="text-default-500 text-2xl" />
+          </Link>
           <Link isExternal aria-label="Instagram" href={siteConfig.links.instagram}>
             <FaInstagram className="text-default-500 text-2xl" />
           </Link>
@@ -126,9 +129,6 @@ export const Navbar = () => {
           <Link isExternal aria-label="Facebook" href={siteConfig.links.facebook}>
             <FaFacebook className="text-default-500 text-2xl" />
          </Link>
-          <Link isExternal aria-label="Linkedin" href={siteConfig.links.linkedin}>
-            <FaLinkedin className="text-default-500 text-2xl" />
-          </Link>
       </div>
         </div>
       </NavbarMenu>

@@ -7,6 +7,14 @@ import { Select, SelectSection, SelectItem } from "@heroui/select";
 import {Checkbox} from "@heroui/checkbox";
 import { useState } from "react";
 
+import { createClient } from '@supabase/supabase-js'
+ 
+import {Spinner} from "@heroui/spinner";
+
+const supabaseUrl = 'https://lujbzjnpagthkjmzdlmm.supabase.co';
+
+const supabaseKey = process.env.SUPABASE_KEY;
+
 const sections = [
     {key:"A", label:"A"},
     {key:"B", label:"B"},
@@ -42,26 +50,85 @@ const verticals = [
     {key:"Web Developer", label:"Web Developer"},
 ]
 
+
 export default function page(){ 
     
-    const [submitted, setSubmitted] = useState<FormDataEntryValue|null>(null);
+    const [submitted, setSubmitted] = useState<{ [k: string]: FormDataEntryValue; }|null>(null);
 
     const [isFr, setisFr] = useState(false);
 
+    const [isLoaing, setIsLoading] = useState(false);
     
     return (
     <main className="min-h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <h1 className="pt-8 text-6xl font-extrabold  text-center mb-10 overflow-visible h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
-            Apply now
-        </h1>
-        <h2>Fill the form below to apply for Entrepreneurship cell's annual recruitment drive.</h2>
+        {
+            !submitted ?  (
+                <>
+                    <h1 className="pt-8 text-5xl sm:text-6xl font-extrabold  text-center mb-10 overflow-visible h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
+                        Apply now
+                    </h1>
+                    <h2 className="text-neutral-200 text-center text-sm w-4/5">Fill out the form below to apply for the Entrepreneurship Cell's annual recruitment drive.</h2>
+                    
+                </>                
+            )
+            :
+            (
+                <>
+                    <h1 className="pt-8 pb-2 text-4xl sm:text-6xl font-extrabold  text-center mb-10 overflow-visible min-h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
+                            Registered Successfully!
+                    </h1>
+                    <h2 className="text-neutral-200 text-center text-sm w-4/5">All the best for the comming rounds.</h2>
+                    
+                </>
+            )
+        }
 
-        <Form className="w-full max-w-md py-10 flex flex-col gap-10" onSubmit={(data) => {}}>
+        <Form className="w-full max-w-md py-10 flex flex-col gap-10" onSubmit={async (evt) => {
+            evt.preventDefault();
+            setIsLoading(true);
+            const form = evt.currentTarget;
+            const formData = Object.fromEntries(new FormData(form));
+            
+            if(formData.isfr == null) formData.isfr = "false";
+            setSubmitted(formData);
+            console.log(formData);
+            
+            let supabase;
+            
+            if(supabaseKey){
+                supabase = createClient(supabaseUrl, supabaseKey)
+                try{
+                    const { data, error } = await supabase
+                    .from('registrations')
+                    .insert([
+                        formData,
+                    ])
+                    .select();
+    
+                    console.log(data, error);
+                    setIsLoading(false);  
+                    
+                    if(error===null){
+                        form.reset();
+                        form.style.display = "none"; 
+                    }
+                }
+
+                catch(e){
+                    console.error(e);
+                }
+            }
+
+            else{
+                console.error("supabase key not found")
+            }
+
+        }}>
       
         <div className="flex flex-col gap-2">
             <h3 className="font-semibold text-lg text-[#fdba74]">Personal information:</h3>
             <span className="text-sm text-default-500">
-                fill the following details required to contact you and verify your identity.
+                fill in the following details required to contact you and verify your identity.
             </span>
         </div>
         
@@ -78,9 +145,9 @@ export default function page(){
         <Input
             isRequired
             errorMessage="mobile number is required"
-            label="Mobile number"
+            label="Mobile number (WhatsApp connected)"
             labelPlacement="outside"
-            name="mobno"
+            name="phone"
             placeholder="000 000 0000"
             type="tel"
         />
@@ -90,15 +157,17 @@ export default function page(){
             errorMessage="Name is required"
             label="Name"
             labelPlacement="outside"
-            name="fullname"
+            name="name"
             placeholder="Enter your full name"
             type="text"
         />
         
         <Select
         isRequired
+        errorMessage="Section is required"
         className="max-w-xs"
         label="Section"
+        name="section"
         labelPlacement="outside"
         placeholder="select your section"
         >
@@ -150,11 +219,12 @@ export default function page(){
 
         <Select
         isRequired
+        errorMessage="Preferred vertical is required"
         className="max-w-xs"
         label="Vertical-1"
         labelPlacement="outside"
         placeholder="select vertical-1"
-        name="vertical1"
+        name="vone"
         >
 
             {verticals.map(ver => (
@@ -167,7 +237,7 @@ export default function page(){
         label="Vertical-2"
         labelPlacement="outside"
         placeholder="select vertical-2"
-        name="vertical2"
+        name="vtwo"
         >
 
             {verticals.map(sec => (
@@ -176,13 +246,18 @@ export default function page(){
         </Select>
     
         <div className="flex flex-col gap-2">
-            <h3 className="font-semibold text-lg text-[#fdba74]">More about yourself</h3>
+            <h3 className="font-semibold text-lg text-[#fdba74]">More about you</h3>
             <span className="text-sm text-default-500">
                 let us know about your skills, and why you want to be a part of Entrepreneurship Cell.
             </span>
         </div>
  
-        <Checkbox name="isfr" isSelected={isFr} onValueChange={setisFr} >
+        <Checkbox 
+        isSelected={isFr} 
+        onValueChange={setisFr} 
+        value={isFr!==null ? (isFr ? "true" : "false"):"false"}
+        name="isfr" 
+        >
             <span className="text-sm text-default-500">
                 I was a Fresher's Representative for E-Summit '25
             </span>
@@ -192,7 +267,7 @@ export default function page(){
             isFr && (
                 <Input
                 isRequired
-                errorMessage="Please enter a valid email"
+                errorMessage="FR ID is required"
                 label="Fresher's Representative ID"
                 labelPlacement="outside"
                 name="frid"
@@ -202,20 +277,35 @@ export default function page(){
             )
         }
 
-        <Textarea className="w-full max-w-[500px]" label="Skills you'd like to highlight" name="skills" labelPlacement="outside" placeholder="for example: communication skills, technical skills, etc." />
+        <Textarea className="w-full max-w-[500px]" label="Skills you'd like to highlight" name="skills" labelPlacement="outside" placeholder="Write in brief about your skills. for example: communication skills, technical skills, etc." />
     
         <Textarea className="w-full max-w-[500px]" label="Statement of Purpose" name="sop" labelPlacement="outside" placeholder="Why do you want to be a part of E-Cell?" />
 
-      <Button type="submit" variant="bordered">
+      <Button type="submit" className="rounded-full px-8 bg-[#956013] text-white font-bold">
         Submit
       </Button>
-      {submitted && (
-        <div className="text-small text-default-500">
-          You submitted: <code>{JSON.stringify(submitted)}</code>
-        </div>
-      )}
-    </Form>
 
+    </Form>
+    {
+        isLoaing &&
+            <div className="fixed top-0 bottom-0 left-0 right-0 p-4 text-xs text-neutral-200 z-[1000] backdrop-blur-lg bg-[#956013]/50 flex justify-center items-center flex-col gap-4">
+                <Spinner />
+                <span className="text-center text-4xl font-semibold">Submitting your response...</span>                
+            </div>
+        
+    }
+
+
+      {/* {submitted && (
+        <div className="text-small flex flex-col w-full justify-center">
+          You submitted: 
+          {Object.entries(submitted).map(([key, value]) => (    
+            <span key={key} className="text-sm text-neutral-200">
+              {key}: {value as string}
+            </span>
+            ))}
+        </div>
+      )} */}
     </main>
 )
 }

@@ -48,9 +48,11 @@ export default function RootLayout({
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              {children}
+              
+                {children}
+            
             </main>
-            <footer className="w-full flex flex-col items-center justify-center py-3 border-t border-neutral-800">
+            <footer className="w-full flex gap-4 flex-col items-center justify-center py-8 border-t border-neutral-800">
               <div className="flex flex-row justify-evenly items-center gap-4 w-full flex-wrap">
                 <NextLink
                   className="flex justify-start items-center gap-1"
@@ -64,11 +66,12 @@ export default function RootLayout({
                     height={40}
                     className="mr-3"
                   />
-                  <span>
-                    <p className="font-bold text-inherit">
+                  <span className="gap-1">
+                    <p className="font-bold text-md">
                       Entrepreneurship Cell
                     </p>
-                    <p className="text-xs text-neutral-200">NIT Bhopal</p>
+                    <p className="text-xs text-neutral-200">ROLTA Incubation Centre</p>
+                    <p className="text-xs text-neutral-200">MANIT, Bhopal</p>
                   </span>
                 </NextLink>
 
@@ -98,8 +101,8 @@ export default function RootLayout({
                 </div>
               </div>
 
-              <div className="text-xs text-neutral-400">
-                Copyright &copy; Entrepreneurship Cell MANIT Bhopal 2025
+              <div className="text-xs text-neutral-400 px-2">
+                Copyright &copy; Entrepreneurship Cell NIT Bhopal, 2025
               </div>
             </footer>
           </div>

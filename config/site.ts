@@ -13,8 +13,8 @@ export const siteConfig = {
       href: "/apply",
     },
     {
-      label: "task",
-      href: "/task",
+      label: "Task",
+      href: "task",
     },
   ],
   navMenuItems: [
@@ -27,7 +27,7 @@ export const siteConfig = {
       href: "/apply",
     },
     {
-      label: "task",
+      label: "Task",
       href: "/task",
     },
   ],
