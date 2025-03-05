@@ -48,9 +48,7 @@ export default function RootLayout({
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              
-                {children}
-            
+              {children}
             </main>
             <footer className="w-full flex gap-4 flex-col items-center justify-center py-8 border-t border-neutral-800">
               <div className="flex flex-row justify-evenly items-center gap-4 w-full flex-wrap">
@@ -67,10 +65,10 @@ export default function RootLayout({
                     className="mr-3"
                   />
                   <span className="gap-1">
-                    <p className="font-bold text-md">
-                      Entrepreneurship Cell
+                    <p className="font-bold text-md">Entrepreneurship Cell</p>
+                    <p className="text-xs text-neutral-200">
+                      ROLTA Incubation Centre
                     </p>
-                    <p className="text-xs text-neutral-200">ROLTA Incubation Centre</p>
                     <p className="text-xs text-neutral-200">MANIT, Bhopal</p>
                   </span>
                 </NextLink>

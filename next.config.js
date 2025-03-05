@@ -5,4 +5,8 @@ const nextConfig = {
     },
 };
 
+if (process.env.NEXT_PUBLIC_IGNORE_WARNINGS === "true") {
+    process.env.NODE_NO_WARNINGS = "1";
+}
+
 module.exports = nextConfig;
