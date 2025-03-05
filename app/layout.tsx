@@ -87,7 +87,7 @@ export default function RootLayout({
                       </Link>
                     </span>
                     <span>
-                      <span>Sannidhya Srivastave: </span>{" "}
+                      <span>Sannidhya Srivastava: </span>{" "}
                       <Link
                         className="text-xs text-neutral-600"
                         href="tel:+91 000 000 0000"
