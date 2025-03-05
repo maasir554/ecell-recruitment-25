@@ -57,7 +57,7 @@ export const Navbar = () => {
             <span>
               <p className="font-bold text-inherit">Entrepreneurship Cell</p>
               <p className="text-xs text-neutral-200">
-                NIT Bhopal | Recruitment '25
+               {`NIT Bhopal | Recruitment '25`}
               </p>
             </span>
           </NextLink>

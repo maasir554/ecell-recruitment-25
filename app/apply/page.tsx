@@ -67,17 +67,17 @@ export default function Page() {
             Apply now
           </h1>
           <h2 className="text-neutral-200 text-center text-sm w-4/5">
-            Fill out the form below to apply for the Entrepreneurship Cell's
+            Fill out the form below to apply for the Entrepreneurship Cell&apos;s
             annual recruitment drive.
           </h2>
         </>
       ) : (
         <>
           <h1 className="pt-8 pb-2 text-4xl sm:text-6xl font-extrabold  text-center mb-10 overflow-visible min-h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
-            Registered Successfully!
+            {`Registered Successfully!`}
           </h1>
           <h2 className="text-neutral-200 text-center text-sm w-4/5">
-            All the best for the comming rounds.
+            {`All the best for the comming rounds.`}
           </h2>
         </>
       )}
@@ -121,11 +121,11 @@ export default function Page() {
       >
         <div className="flex flex-col gap-2">
           <h3 className="font-semibold text-lg text-[#fdba74]">
-            Personal information:
+            {`Personal information:`}
           </h3>
           <span className="text-sm text-default-500">
-            fill in the following details required to contact you and verify
-            your identity.
+            {`fill in the following details required to contact you and verify
+            your identity.`}
           </span>
         </div>
 
@@ -206,11 +206,13 @@ export default function Page() {
 
         <div className="flex flex-col gap-2">
           <h3 className="font-semibold text-lg text-[#fdba74]">
-            Select your vertical preference:
+            {`Select your vertical preference:`}
           </h3>
           <span className="text-sm text-default-500">
-            You can apply for as many as two verticals, please select your first
-            and second priority.
+           
+            {`You can apply for as many as two verticals, please select your first
+            and second priority.`}
+         
           </span>
         </div>
 
@@ -257,7 +259,7 @@ export default function Page() {
           name="isfr"
         >
           <span className="text-sm text-default-500">
-            I was a Fresher's Representative for E-Summit '25
+            {`I was a Fresher's Representative for E-Summit '25`}
           </span>
         </Checkbox>
 
@@ -300,7 +302,7 @@ export default function Page() {
         <div className="fixed top-0 bottom-0 left-0 right-0 p-4 text-xs text-neutral-200 z-[1000] backdrop-blur-lg bg-[#956013]/50 flex justify-center items-center flex-col gap-4">
           <Spinner />
           <span className="text-center text-4xl font-semibold">
-            Submitting your response...
+            {`Submitting your response...`}
           </span>
         </div>
       )}
