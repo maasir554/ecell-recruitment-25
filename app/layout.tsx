@@ -80,8 +80,8 @@ export default function RootLayout({
                     <span>
                       <span>Muskan Yadav: </span>{" "}
                       <Link
-                        className="text-xs text-neutral-600"
-                        href="tel:+91 000 000 0000"
+                        className="text-xs text-neutral-500"
+                        href="tel:+91 72238 41399"
                       >
                         {`+91 72238 41399`}
                       </Link>
@@ -89,8 +89,8 @@ export default function RootLayout({
                     <span>
                       <span>Sannidhya Srivastava: </span>{" "}
                       <Link
-                        className="text-xs text-neutral-600"
-                        href="tel:+91 000 000 0000"
+                        className="text-xs text-neutral-500"
+                        href="tel:+91 76074 76106"
                       >
                        {`+91 76074 76106`}
                       </Link>
