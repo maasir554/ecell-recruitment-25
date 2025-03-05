@@ -77,7 +77,7 @@ export default function Page() {
             {`Registered Successfully!`}
           </h1>
           <h2 className="text-neutral-200 text-center text-sm w-4/5">
-            {`All the best for the comming rounds.`}
+            {`All the best for the coming rounds.`}
           </h2>
         </>
       )}
