@@ -3,13 +3,16 @@
 import { Form } from "@heroui/form";
 import { Input, Textarea } from "@heroui/input";
 import { Button } from "@heroui/button";
-import { Select, SelectSection, SelectItem } from "@heroui/select";
+import { Select, SelectItem } from "@heroui/select";
 import { Checkbox } from "@heroui/checkbox";
 import { useState } from "react";
+
+import { GridPattern } from "@/components/grid-pattern";
 
 import { createClient } from "@supabase/supabase-js";
 
 import { Spinner } from "@heroui/spinner";
+import { cn } from "@/lib/utils";
 
 const supabaseUrl = "https://lujbzjnpagthkjmzdlmm.supabase.co";
 
@@ -63,7 +66,12 @@ export default function Page() {
   const [v2, setV2] = useState<string>("");
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <main className="relative min-h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+      <GridPattern 
+      width={15} height={15} x={7} y={7} 
+      strokeDasharray="4 1"
+      className={cn("[mask-image:linear-gradient(266deg,transparent_0%,white_40%,white_60%,transparent_100%),radial-gradient(circle,white_45%,transparent_90%)]","[mask-composite:intersect]", "fill-red-600 stroke-yellow-300/20")}
+      />
       {!submitted ? (
         <>
           <h1 className="pt-8 text-5xl sm:text-6xl font-extrabold  text-center mb-10 overflow-visible h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
@@ -184,7 +192,6 @@ export default function Page() {
           name="section"
           labelPlacement="outside"
           placeholder="select your section"
-          value={v1}
         >
           {sections.map((sec) => (
             <SelectItem key={sec.key}>{sec.label}</SelectItem>
