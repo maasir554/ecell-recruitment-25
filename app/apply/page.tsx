@@ -35,7 +35,7 @@ const branches = [
   { key: "Chemical", label: "Chemical" },
   { key: "Civil", label: "Civil" },
   { key: "Mechanical", label: "Mechanical" },
-  { key: "Architectre", label: "Architecture" },
+  { key: "Architecture", label: "Architecture" },
   { key: "Planning", label: "Planning" },
   { key: "MDS", label: "MDS" },
   { key: "Electrical", label: "Electrical" },
