@@ -50,59 +50,7 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex gap-4 flex-col items-center justify-center py-8 border-t border-neutral-800">
-              <div className="flex flex-row justify-evenly items-center gap-4 w-full flex-wrap">
-                <NextLink
-                  className="flex justify-start items-center gap-1"
-                  href="https://ecellnitb.in"
-                  target="_blank"
-                >
-                  <Image
-                    src="/logo.webp"
-                    alt="E-Cell NITB"
-                    width={40}
-                    height={40}
-                    className="mr-3"
-                  />
-                  <span className="gap-1">
-                    <p className="font-bold text-md">Entrepreneurship Cell</p>
-                    <p className="text-xs text-neutral-200">
-                      ROLTA Incubation Center
-                    </p>
-                    <p className="text-xs text-neutral-200">MANIT, Bhopal</p>
-                  </span>
-                </NextLink>
-
-                {/* contact numbers */}
-                <div className="flex flex-col gap-2 py-6">
-                  <h3 className="font-semibold text-sm">For queries:</h3>
-                  <div className="flex flex-col gap-1 text-xs text-neutral-400">
-                    <span>
-                      <span>Muskan Yadav: </span>{" "}
-                      <Link
-                        className="text-xs text-neutral-500"
-                        href="tel:+91 72238 41399"
-                      >
-                        {`+91 72238 41399`}
-                      </Link>
-                    </span>
-                    <span>
-                      <span>Sannidhya Srivastava: </span>{" "}
-                      <Link
-                        className="text-xs text-neutral-500"
-                        href="tel:+91 76074 76106"
-                      >
-                       {`+91 76074 76106`}
-                      </Link>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-xs text-neutral-400 px-2">
-                Copyright &copy; Entrepreneurship Cell NIT Bhopal, 2025
-              </div>
-            </footer>
+            
           </div>
         </Providers>
       </body>
