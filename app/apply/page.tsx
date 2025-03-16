@@ -204,6 +204,7 @@ export default function Page() {
           label="Branch"
           labelPlacement="outside"
           placeholder="select your Branch"
+          errorMessage="Branch name is required"
           name="branch"
         >
           {branches.map((branch) => (
