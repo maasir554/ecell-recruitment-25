@@ -40,7 +40,7 @@ export const Navbar = () => {
       isBordered
       shouldHideOnScroll
     >
-      <div className="flex">
+      <div className="flex flex-1">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink
             className="flex justify-start items-center gap-1"
@@ -64,8 +64,8 @@ export const Navbar = () => {
         </NavbarBrand>
       </div>
 
-      <div>
-        <ul className="hidden justify-start md:flex gap-4 ml-2">
+      <div className="flex-auto">
+        <ul className="hidden justify-start++ md:flex justify-center items-center gap-4 ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -83,7 +83,7 @@ export const Navbar = () => {
         </ul>
       </div>
 
-      <div className="hidden md:flex gap-2">
+      <div className="hidden md:flex gap-2 flex-1 justify-end">
         <Link isExternal aria-label="Linkedin" href={siteConfig.links.linkedin}>
           <FaLinkedin className="text-default-500 text-2xl" />
         </Link>
