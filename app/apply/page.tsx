@@ -149,8 +149,7 @@ export default function Page() {
             {`Personal information:`}
           </h3>
           <span className="text-sm text-default-500">
-            {`fill in the following details required to contact you and verify
-            your identity.`}
+            {`Details required to contact you and to verify your identity.`}
           </span>
         </div>
 
@@ -166,7 +165,7 @@ export default function Page() {
 
         <Input
           isRequired
-          errorMessage="mobile number is required"
+          errorMessage="Mobile number is required"
           label="Mobile number (WhatsApp connected)"
           labelPlacement="outside"
           name="phone"
@@ -191,7 +190,7 @@ export default function Page() {
           label="Section"
           name="section"
           labelPlacement="outside"
-          placeholder="select your section"
+          placeholder="Select your section"
         >
           {sections.map((sec) => (
             <SelectItem key={sec.key}>{sec.label}</SelectItem>
@@ -248,7 +247,7 @@ export default function Page() {
           className="max-w-xs"
           label="Vertical-1"
           labelPlacement="outside"
-          placeholder="select vertical-1"
+          placeholder="Select Vertical-1"
           name="vone"
           onChange={(e) => setV1(e.target.value)}
         >
@@ -261,7 +260,7 @@ export default function Page() {
           className="max-w-xs"
           label="Vertical-2"
           labelPlacement="outside"
-          placeholder="select vertical-2"
+          placeholder="Select Vertical-2"
           name="vtwo"
           onChange={(e) => setV2(e.target.value)}
         >
@@ -275,7 +274,7 @@ export default function Page() {
             More about you
           </h3>
           <span className="text-sm text-default-500">
-            let us know about your skills, and why you want to be a part of
+            Let us know about your skills, and why you want to be a part of
             Entrepreneurship Cell.
           </span>
         </div>
