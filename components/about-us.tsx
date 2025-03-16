@@ -9,9 +9,9 @@ export default function AboutSection() {
   return (
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">About E-Cell NIT Bhopal</h2>
+        <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">{`About E-Cell NIT Bhopal`}</h2>
         <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
-          Fostering innovation and entrepreneurship among students.
+          {`Fostering innovation and entrepreneurship among students.`}
         </p>
       </div>
 
@@ -53,19 +53,20 @@ export default function AboutSection() {
         <div className="space-y-6">
           <h3 className="font-montserrat text-2xl font-bold text-white">Our Mission</h3>
           <p className="font-roboto text-white">
-          Entrepreneurship Cell MANIT Bhopal is a student-run voluntary organization aimed at fostering a dynamic startup culture within the student community and creating a thriving entrepreneurial ecosystem. E-Cell provides an exceptional platform to develop key skills and transform innovative ideas into successful ventures. 
-
+          {`Entrepreneurship Cell MANIT Bhopal is a student-run voluntary organization aimed at fostering a dynamic startup culture within the student community and creating a thriving entrepreneurial ecosystem. E-Cell provides an exceptional platform to develop key skills and transform innovative ideas into successful ventures. 
+`}
           </p>
 
           <h3 className="font-montserrat text-2xl font-bold text-white">What We Do</h3>
           <p className="font-roboto text-white">
-          Through prominent events like E-Summit and Pe-Charcha, it organizes engaging competitions that challenge creativity, along with expert-led sessions that lay the groundwork for shaping the aspiring entrepreneurial minds. 
+          {`Through prominent events like E-Summit and Pe-Charcha, it organizes engaging competitions that challenge creativity, along with expert-led sessions that lay the groundwork for shaping the aspiring entrepreneurial minds. 
+        `}
         </p>
         </div>
       </div>
 
       {/* Stats Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
+      {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
         <div className="p-6 glassmorphism rounded-xl">
           <div className="font-montserrat text-3xl font-bold text-primary mb-2">35K+</div>
           <div className="font-inter text-white">Enthusiastic attendees</div>
@@ -85,7 +86,7 @@ export default function AboutSection() {
           <div className="font-inter text-white">Media Outlets
           were key to event's success</div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

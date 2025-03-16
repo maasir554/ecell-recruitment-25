@@ -63,8 +63,8 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Join Our Team</h2>
             <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
-              We're looking for passionate individuals to join various teams at E-Cell NIT Bhopal. Hover over the cards
-              to learn more about each role.
+              {`We're looking for passionate individuals to join various teams at E-Cell NIT Bhopal. Hover over the cards
+              to learn more about each role.`}
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Recruitment Rules</h2>
             <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
-              Please review the following rules and guidelines for our recruitment process.
+              {`Please review the following rules and guidelines for our recruitment process.`}
             </p>
           </div>
 
@@ -128,9 +128,9 @@ export default function Home() {
                   1
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Eligibility</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  Only First year B.Tech/B.Arch/B.plan from MANIT can apply for the recruitment process.
+                  {`Only First year B.Tech/B.Arch/B.plan from MANIT can apply for the recruitment process`}
                   </p>
                 </div>
               </li>
@@ -139,9 +139,9 @@ export default function Home() {
                   2
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Application Process</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  Interested students can apply in a maximum of two verticals.
+                  Interested students can apply in a maximum of two verticals
 
                   </p>
                 </div>
@@ -151,9 +151,9 @@ export default function Home() {
                   3
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Selection Criteria</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  Interested students can apply for the recruitment through the official website of Entrepreneurship Cell MANIT Bhopal.
+                  Interested students can apply for the recruitment through the official website of Entrepreneurship Cell MANIT Bhopal
                   </p>
                 </div>
               </li>
@@ -162,9 +162,9 @@ export default function Home() {
                   4
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Code of Conduct</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  The recruitment shall be done in three rounds and in a hybrid manner.
+                  The recruitment shall be done in three rounds and in a hybrid manner
                   </p>
                 </div>
                 </li>
@@ -173,10 +173,10 @@ export default function Home() {
                   5
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Eligibility</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  The first round shall be online where all participants will be given a task according to their verticals. Participants who clear this round shall advance to the offline interview round.
-
+                  {`The first round shall be online where all participants will be given a task according to their verticals. Participants who clear this round shall advance to the offline interview round
+`}
 
                   </p>
                 </div>
@@ -186,9 +186,9 @@ export default function Home() {
                   6
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Application Process</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  The participants who advance the offline interview round shall face an HR interview round.
+                  The participants who advance the offline interview round shall face an HR interview round
 
                   </p>
                 </div>
@@ -198,9 +198,10 @@ export default function Home() {
                   7
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Selection Criteria</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  Any form of plagiarism or use of unfair means in any stage of the recruitment shall lead to immediate disqualification of a candidate.
+                 {` Any form of plagiarism or use of unfair means in any stage of the recruitment shall lead to immediate disqualification of a candidate
+                  `}
                   </p>
                 </div>
               </li>
@@ -209,10 +210,10 @@ export default function Home() {
                   8
                 </div>
                 <div>
-                  <h3 className="font-montserrat text-xl font-bold text-white mb-1">Code of Conduct</h3>
+                  
                   <p className="font-roboto text-white/80">
-                  Any participant who fails to abide by the deadline set for task submission shall not be considered. Thus, participants must strictly adhere to the timings.
-
+                  {`Any participant who fails to abide by the deadline set for task submission shall not be considered. Thus, participants must strictly adhere to the timings
+`}
                   </p>
                 </div>
               </li>
@@ -229,7 +230,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Team Glimpse</h2>
             <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
-              Meet the passionate individuals who make E-Cell NIT Bhopal a thriving community.
+              {`Meet the passionate individuals who make E-Cell NIT Bhopal a thriving community.`}
             </p>
           </div>
 
@@ -240,9 +241,9 @@ export default function Home() {
       {/* Apply Section */}
       <section id="apply" className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Ready to Apply?</h2>
+          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">{`Ready to Apply?`}</h2>
           <p className="font-roboto text-lg text-white max-w-2xl mx-auto mb-8">
-            Fill out our application form to start your journey with E-Cell NIT Bhopal. We can't wait to meet you!
+            {`Fill out our application form to start your journey with E-Cell NIT Bhopal. We can't wait to meet you!`}
           </p>
           <Link
             href="/apply"

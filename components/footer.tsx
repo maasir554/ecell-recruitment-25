@@ -17,10 +17,10 @@ export default function Footer() {
                 height={40}
                 className="h-10 w-auto"
               />
-              <span className="font-montserrat font-bold text-xl">E-Cell NIT Bhopal</span>
+              <span className="font-montserrat font-bold text-xl">{`E-Cell NIT Bhopal`}</span>
             </div>
             <p className="font-roboto text-white/70 mb-4">
-              Fostering innovation and entrepreneurship among students.
+              {`Fostering innovation and entrepreneurship among students.`}
             </p>
             <div className="flex gap-4">
               <Link href="https://www.facebook.com/ecellnitbhopal" className="text-white/70 hover:text-primary transition-colors">
@@ -80,7 +80,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                <span className="font-roboto text-white/70">MANIT Bhopal, Madhya Pradesh, India - 462003</span>
+                <span className="font-roboto text-white/70">{`MANIT Bhopal, Madhya Pradesh, India - 462003`}</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-2" />
@@ -88,7 +88,7 @@ export default function Footer() {
                   href="mailto:ecell@nitbhopal.ac.in"
                   className="font-roboto text-white/70 hover:text-primary transition-colors"
                 >
-                  contact@ecellnitb.in
+                  {`contact@ecellnitb.in`}
                 </Link>
               </li>
               <li className="flex items-start">
@@ -98,25 +98,25 @@ export default function Footer() {
                     href="tel:+917223841399"
                     className="font-roboto text-white/70 hover:text-primary transition-colors"
                   >
-                    Muskan Yadav: {`+91 72238 41399`}
+                    {`Muskan Yadav: +91 72238 41399`}
                   </Link>
                   <Link
                     href="tel:+917607476106"
                     className="font-roboto text-white/70 hover:text-primary transition-colors"
                   >
-                    Sannidhya Srivastava: {`+91 76074 76106`}
+                   {`Sannidhya Srivastava: +91 76074 76106`}
                   </Link>
                   <Link
                     href="tel:+919479606424"
                     className="font-roboto text-white/70 hover:text-primary transition-colors"
                   >
-                    Nidhi Singh Thakur: {`+91 94796 06424`}
+                    {`Nidhi Singh Thakur: +91 94796 06424`}
                   </Link>
                   <Link
                     href="tel:+918817263318"
                     className="font-roboto text-white/70 hover:text-primary transition-colors"
                   >
-                    Dev Bansal: {`+91 88172 63318`}
+                   {` Dev Bansal: +91 88172 63318`}
                   </Link>
                 </div>
               </li>
@@ -126,7 +126,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="font-inter text-sm text-white/70">
-            &copy; {new Date().getFullYear()} E-Cell NIT Bhopal. All rights reserved.
+            &copy; {new Date().getFullYear()} {`E-Cell NIT Bhopal. All rights reserved.`}
           </p>
         </div>
       </div>
