@@ -3,13 +3,16 @@
 import { Form } from "@heroui/form";
 import { Input, Textarea } from "@heroui/input";
 import { Button } from "@heroui/button";
-import { Select, SelectSection, SelectItem } from "@heroui/select";
+import { Select, SelectItem } from "@heroui/select";
 import { Checkbox } from "@heroui/checkbox";
 import { useState } from "react";
+
+import { GridPattern } from "@/components/grid-pattern";
 
 import { createClient } from "@supabase/supabase-js";
 
 import { Spinner } from "@heroui/spinner";
+import { cn } from "@/lib/utils";
 
 const supabaseUrl = "https://lujbzjnpagthkjmzdlmm.supabase.co";
 
@@ -35,7 +38,7 @@ const branches = [
   { key: "Chemical", label: "Chemical" },
   { key: "Civil", label: "Civil" },
   { key: "Mechanical", label: "Mechanical" },
-  { key: "Architectre", label: "Architecture" },
+  { key: "Architecture", label: "Architecture" },
   { key: "Planning", label: "Planning" },
   { key: "MDS", label: "MDS" },
   { key: "Electrical", label: "Electrical" },
@@ -63,7 +66,12 @@ export default function Page() {
   const [v2, setV2] = useState<string>("");
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <main className="relative min-h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+      <GridPattern 
+      width={15} height={15} x={7} y={7} 
+      strokeDasharray="4 1"
+      className={cn("[mask-image:linear-gradient(266deg,transparent_0%,white_40%,white_60%,transparent_100%),radial-gradient(circle,white_45%,transparent_90%)]","[mask-composite:intersect]", "fill-red-600 stroke-yellow-300/20")}
+      />
       {!submitted ? (
         <>
           <h1 className="pt-8 text-5xl sm:text-6xl font-extrabold  text-center mb-10 overflow-visible h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
@@ -141,8 +149,7 @@ export default function Page() {
             {`Personal information:`}
           </h3>
           <span className="text-sm text-default-500">
-            {`fill in the following details required to contact you and verify
-            your identity.`}
+            {`Details required to contact you and to verify your identity.`}
           </span>
         </div>
 
@@ -158,7 +165,7 @@ export default function Page() {
 
         <Input
           isRequired
-          errorMessage="mobile number is required"
+          errorMessage="Mobile number is required"
           label="Mobile number (WhatsApp connected)"
           labelPlacement="outside"
           name="phone"
@@ -183,8 +190,7 @@ export default function Page() {
           label="Section"
           name="section"
           labelPlacement="outside"
-          placeholder="select your section"
-          value={v1}
+          placeholder="Select your section"
         >
           {sections.map((sec) => (
             <SelectItem key={sec.key}>{sec.label}</SelectItem>
@@ -197,6 +203,7 @@ export default function Page() {
           label="Branch"
           labelPlacement="outside"
           placeholder="select your Branch"
+          errorMessage="Branch name is required"
           name="branch"
         >
           {branches.map((branch) => (
@@ -240,7 +247,7 @@ export default function Page() {
           className="max-w-xs"
           label="Vertical-1"
           labelPlacement="outside"
-          placeholder="select vertical-1"
+          placeholder="Select Vertical-1"
           name="vone"
           onChange={(e) => setV1(e.target.value)}
         >
@@ -253,7 +260,7 @@ export default function Page() {
           className="max-w-xs"
           label="Vertical-2"
           labelPlacement="outside"
-          placeholder="select vertical-2"
+          placeholder="Select Vertical-2"
           name="vtwo"
           onChange={(e) => setV2(e.target.value)}
         >
@@ -267,7 +274,7 @@ export default function Page() {
             More about you
           </h3>
           <span className="text-sm text-default-500">
-            let us know about your skills, and why you want to be a part of
+            Let us know about your skills, and why you want to be a part of
             Entrepreneurship Cell.
           </span>
         </div>
