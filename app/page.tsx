@@ -11,6 +11,9 @@ import { cn } from "@/lib/utils"
 
 import { LuArrowUpRight } from "react-icons/lu";
 
+import { GridPattern } from "@/components/grid-pattern";
+
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -48,7 +51,7 @@ export default function Home() {
               </Link>
               <Link
                 href="#recruitment"
-                className="rounded-full text-sm md:text-lg h-min py-2 md:py-3 px-4 sm:px-6 md:px-8 bg-transparent text-white border-3 border-white font-bold flex justify-center items-center hover:opacity-95"
+                className="rounded-full text-sm md:text-lg h-min py-2 md:py-3 px-4 sm:px-6 md:px-8 bg-transparent text-white border-3 border-white font-bold flex justify-center items-center hover:bg-white hover:text-black transition-colors"
               >
                 Explore Roles
               </Link>
@@ -250,16 +253,27 @@ export default function Home() {
       </section>
 
       {/* Apply Section */}
-      <section id="apply" className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">{`Ready to Apply?`}</h2>
-          <p className="font-roboto text-lg text-white max-w-2xl mx-auto mb-8">
+      <section id="apply" className="relative py-16 md:py-24 bg-black">
+        
+        <GridPattern 
+                width={30} height={30} 
+                x={700} 
+                y={100} 
+                // strokeDasharray="4 1"
+                className={cn("[mask-image:linear-gradient(90deg,transparent_0%,white_20%,white_80%,transparent_100%),linear-gradient(0deg,transparent_0%,white_5%,white_95%,transparent_100%)]","[mask-composite:intersect]", "fill-red-600 stroke-yellow-300/20")}          
+        />
+
+        <div className="container mx-auto px-4 text-center flex items-center flex-col">
+          
+          <h2 className="text-4xl sm:text-6xl font-extrabold  text-center mb-6 overflow-visible text-transparent bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#362e1a] z-10 h-[80px]">{`Ready to Apply?`}</h2>
+          
+          <p className="font-roboto text-base text-neutral-400 max-w-xl mx-auto mb-8">
             {`Fill out our application form to start your journey with E-Cell NIT Bhopal. We can't wait to meet you!`}
           </p>
+
           <Link
             href="/apply"
-            target="_blank"
-            className="font-inter bg-primary text-white px-8 py-4 rounded-md hover:bg-primary/90 transition-colors text-lg"
+            className="rounded-full text-base md:text-lg z-10 min-w-min w-fit py-3 px-8 bg-[#956013] border-3 border-[#956013] text-white font-bold opacity-100 hover:opacity-90"
           >
             Apply Now
           </Link>
