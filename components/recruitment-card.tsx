@@ -16,7 +16,7 @@ export default function RecruitmentCard({ title, logo, description, applyLink }:
 
   return (
     <div
-      className="h-[350px] perspective-1000 cursor-pointer"
+      className="h-[400px] perspective-1000 cursor-pointer"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -44,18 +44,20 @@ export default function RecruitmentCard({ title, logo, description, applyLink }:
     />
   )}
   <div className="flex flex-col items-center p-4">
-    <h3 className="font-montserrat text-xl font-bold text-white mb-2">{title}</h3>
+    <h3 className="font-montserrat text-center text-xl font-bold text-white mb-2">{title}</h3>
     <p className="font-inter text-white/70 text-sm">Hover to learn more</p>
   </div>
 </div>
 
         {/* Back of card - description and apply button */}
         <div className="absolute w-full h-full backface-hidden bg-black/20 backdrop-blur-lg rounded-xl flex flex-col p-6 rotate-y-180 border border-white/20">
+          
           <h3 className="font-montserrat text-xl font-bold text-white mb-4">{title}</h3>
-          <p className="font-roboto text-white flex-grow mb-6">{description}</p>
+          
+          <p className="font-roboto text-sm md:text-base text-white flex-grow mb-6">{description}</p>
           <Link
             href={applyLink}
-            className="font-inter bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors text-center"
+            className="font-inter bg-[#956013] text-white font-bold px-4 py-2 rounded-full hover:bg-primary/90 transition-colors text-center"
           >
             Apply Now
           </Link>

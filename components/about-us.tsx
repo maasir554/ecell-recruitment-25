@@ -8,16 +8,29 @@ export default function AboutSection() {
 
   return (
     <div className="container mx-auto px-4">
+      
       <div className="text-center mb-16">
-        <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">{`About E-Cell NIT Bhopal`}</h2>
-        <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
-          {`Fostering innovation and entrepreneurship among students.`}
+        <h2 className="text-center mb-6 overflow-visible z-10 py-2 text-2xl sm:text-5xl flex gap-3 flex-wrap justify-center items-center font-bold">
+          
+        
+          <span className="text-5xl sm:text-6xl text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#362e1a]">
+            {`About`}
+          </span>
+          
+        
+          <span >
+            {`E-Cell NIT Bhopal`}
+          </span>
+        
+        </h2>
+        <p className="text-sm sm:text-base md:text-lg text-white/90 font-light max-w-2xl mx-auto italic">
+          {`"Fostering innovation and entrepreneurship among students"`}
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Video Section */}
-        <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
+        <div className="relative aspect-video border-2 border-[#956013] rounded-xl overflow-hidden shadow-lg">
           {!videoPlaying ? (
             <>
               {/* <Image
@@ -30,8 +43,8 @@ export default function AboutSection() {
                 onClick={() => setVideoPlaying(true)}
                 className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors"
               >
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-primary border-b-8 border-b-transparent ml-1" />
+                <div className="w-16 h-16 rounded-full bg-transparent border-4 border-white flex items-center justify-center">
+                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-[#956013] border-b-8 border-b-transparent ml-1" />
                 </div>
               </button>
             </>
@@ -51,13 +64,13 @@ export default function AboutSection() {
 
         {/* Text Content */}
         <div className="space-y-6">
-          <h3 className="font-montserrat text-2xl font-bold text-white">Our Mission</h3>
+          <h3 className="font-montserrat text-2xl font-bold text-[#956013]">Our Mission</h3>
           <p className="font-roboto text-white">
           {`Entrepreneurship Cell MANIT Bhopal is a student-run voluntary organization aimed at fostering a dynamic startup culture within the student community and creating a thriving entrepreneurial ecosystem. E-Cell provides an exceptional platform to develop key skills and transform innovative ideas into successful ventures. 
 `}
           </p>
 
-          <h3 className="font-montserrat text-2xl font-bold text-white">What We Do</h3>
+          <h3 className="font-montserrat text-2xl font-bold text-[#956013]">What We Do?</h3>
           <p className="font-roboto text-white">
           {`Through prominent events like E-Summit and Pe-Charcha, it organizes engaging competitions that challenge creativity, along with expert-led sessions that lay the groundwork for shaping the aspiring entrepreneurial minds. 
         `}

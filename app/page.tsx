@@ -75,7 +75,7 @@ export default function Home() {
       <section id="recruitment" className="py-16 md:py-24  bg-[url('/verticals/bt.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Join Our Team</h2>
+            <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Join Our <span className="text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#615844]">Team</span></h2>
             <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
               {`We're looking for passionate individuals to join various teams at E-Cell NIT Bhopal. Hover over the cards
               to learn more about each role.`}
@@ -126,19 +126,33 @@ export default function Home() {
       </section>
 
       {/* Rules Section */}
-      <section id="rules" className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
+      <section id="rules" className="relative py-16 z-0 md:py-24 bg-black">
+                
+        <div className="absolute top-0 bottom-0 left-0 right-0  z-0 w-full h-full">
+          <GridPattern 
+                  width={30} height={30} 
+                  x={700} 
+                  y={100} 
+                  // strokeDasharray="4 1"
+                  className={cn("[mask-image:linear-gradient(90deg,transparent_0%,white_20%,white_80%,transparent_100%),linear-gradient(0deg,transparent_0%,white_5%,white_95%,transparent_100%)]","[mask-composite:intersect]", "fill-red-600 stroke-yellow-300/20")}          
+          />
+        </div>
+
+        <div className="relative container mx-auto px-4">
+          
           <div className="text-center mb-16">
-            <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Recruitment Rules</h2>
-            <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
+            
+            <h2 className="text-3xl sm:text-5xl md:text-6xl text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#362e1a]">Recruitment Rules</h2>
+            
+            <p className="mt-3 text-sm md:text-base textlg:text-lg text-white/90 max-w-2xl mx-auto">
               {`Please review the following rules and guidelines for our recruitment process.`}
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-white/10">
+          <div className="max-w-3xl mx-auto  bg-black shadow-lg shadow-[#956013]/20 z-20 p-8 rounded-xl border border-white/10">
             <ul className="space-y-6">
               <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   1
                 </div>
                 <div>
@@ -149,7 +163,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   2
                 </div>
                 <div>
@@ -161,7 +175,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   3
                 </div>
                 <div>
@@ -172,7 +186,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   4
                 </div>
                 <div>
@@ -183,7 +197,7 @@ export default function Home() {
                 </div>
                 </li>
                 <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   5
                 </div>
                 <div>
@@ -196,7 +210,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   6
                 </div>
                 <div>
@@ -208,7 +222,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   7
                 </div>
                 <div>
@@ -220,7 +234,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#956013] flex items-center justify-center font-bold">
                   8
                 </div>
                 <div>
@@ -242,8 +256,8 @@ export default function Home() {
       <section id="team" className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Team Glimpse</h2>
-            <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
+            <h2 className="mb-3 text-4xl sm:text-5xl md:text-6xl text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#362e1a]">Team Glimpse</h2>
+            <p className=" text-sm sm:text-base md:text-lg text-white max-w-2xl mx-auto">
               {`Meet the passionate individuals who make E-Cell NIT Bhopal a thriving community.`}
             </p>
           </div>
@@ -273,7 +287,7 @@ export default function Home() {
 
           <Link
             href="/apply"
-            className="rounded-full text-base md:text-lg z-10 min-w-min w-fit py-3 px-8 bg-[#956013] border-3 border-[#956013] text-white font-bold opacity-100 hover:opacity-90"
+            className="rounded-full text-base md:text-lg z-10 min-w-min w-fit py-3 px-8 bg-[#956013] border-3 border-[#956013] text-white font-bold opacity-100 hover:opacity-90  shadow-2xl shadow-[#956013]/50"
           >
             Apply Now
           </Link>

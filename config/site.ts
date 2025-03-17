@@ -4,12 +4,12 @@ export const siteConfig = {
   name: "Recruitment Drive | E-Cell NITB",
   description: "Recruitment portal of Entrepreneurship Cell MANIT Bhopal",
   navItems: [
-    // {
-    //   label: "Home",
-    //   href: "/",
-    // },
     {
-      label: "Registerations are open!",
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Apply",
       href: "/apply",
     },
     // {
@@ -18,18 +18,14 @@ export const siteConfig = {
     // },
   ],
   navMenuItems: [
-    // {
-    //   label: "Home",
-    //   href: "/",
-    // },
     {
-      label: "Registrations are open!",
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Apply",
       href: "/apply",
     },
-    // {
-    //   label: "Task",
-    //   href: "/task",
-    // },
   ],
   links: {
     instagram: "https://www.instagram.com/ecellnitb/",
