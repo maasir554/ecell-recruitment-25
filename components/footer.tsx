@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="w-full">
             <h3 className=" text-lg font-bold text-white mb-2">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
