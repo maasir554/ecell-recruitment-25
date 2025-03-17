@@ -21,7 +21,7 @@ export default function Home() {
             src="/team/hero.jpg"
             alt="E-Cell Background"
             fill
-            className={cn("[mask-image:linear-gradient(270deg,transparent_0%,white_10%,white_90%,transparent_100%),linear-gradient(0deg,transparent_0%,rgb(220,220,220)_30%,rgb(220,220,220)_70%,transparent_100%),radial-gradient(circle,white_75%,transparent_90%)]","[mask-composite:intersect]","object-cover brightness-50")}
+            className={cn("[mask-image:linear-gradient(270deg,transparent_0%,white_10%,white_90%,transparent_100%),linear-gradient(0deg,transparent_0%,rgb(220,220,220)_30%,rgb(220,220,220)_35%,rgba(10,10,10,0.2)_80%,transparent_100%),radial-gradient(circle,white_75%,transparent_90%)]","[mask-composite:intersect]","object-cover brightness-50")}
             priority
           />
         </div>
