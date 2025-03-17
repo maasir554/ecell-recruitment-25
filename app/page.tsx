@@ -9,44 +9,55 @@ import {TeamMarquee} from "@/components/team-glimpse"
 
 import { cn } from "@/lib/utils"
 
+import { LuArrowUpRight } from "react-icons/lu";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
       
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center">
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-screen flex items-center bg-gradient-to-b from-yellow-500/10 via-transparent to-indigo-500/10 md:from-transparent">
+        <div className="absolute z-0 w-full">
           <Image
             src="/team/hero.jpg"
             alt="E-Cell Background"
-            fill
-            className={cn("[mask-image:linear-gradient(270deg,transparent_0%,white_10%,white_90%,transparent_100%),linear-gradient(0deg,transparent_0%,rgb(220,220,220)_30%,rgb(220,220,220)_70%,transparent_100%),radial-gradient(circle,white_75%,transparent_90%)]","[mask-composite:intersect]","object-cover brightness-50")}
+            // fill
+            width={1920}
+            height={1080}
+            className={cn("[mask-image:linear-gradient(270deg,transparent_0%,white_10%,white_90%,transparent_100%),linear-gradient(0deg,transparent_0%,rgb(220,220,220)_30%,rgb(220,220,220)_35%,rgba(10,10,10,0.2)_60%,transparent_100%),radial-gradient(circle,white_75%,transparent_90%)]","[mask-composite:intersect]","object-cover brightness-50")}
             priority
           />
         </div>
-        <div className={"container mx-auto px-4 relative z-10"}>
+        <div className={"container mx-auto px-6 md:px-16 relative z-10 -translate-y-1/2"}>
           <div className="max-w-2xl space-y-6">
-            <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-              Join the <span className="text-primary">Entrepreneurship Cell</span>
+            <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
+              Join the<br/> 
+              <span className="text-primary">Entrepreneurship Cell</span>
             </h1>
-            <p className="font-roboto text-lg text-white/90 max-w-xl">
+              <p className="font-inter text-sm sm:text-base text-white font-light max-w-xl">
               Be a part of the most vibrant community at NIT Bhopal. We nurture innovation, entrepreneurship, and
               leadership skills.
             </p>
             <div className="flex gap-4">
               <Link
+                href="/apply"
+                className="rounded-full text-sm md:text-lg h-min py-2 md:py-3 px-4 sm:px-6 md:px-8 bg-[#956013] border-3 border-[#956013] text-white  font-bold flex justify-center items-center gap-2 hover:opacity-90"
+              >
+                Apply now <LuArrowUpRight/>
+              </Link>
+              <Link
                 href="#recruitment"
-                className="font-inter bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition-colors"
+                className="rounded-full text-sm md:text-lg h-min py-2 md:py-3 px-4 sm:px-6 md:px-8 bg-transparent text-white border-3 border-white font-bold flex justify-center items-center hover:opacity-95"
               >
                 Explore Roles
               </Link>
-              <Link
+              {/* <Link
                 href="#apply"
                 className="font-inter border border-white text-white px-6 py-3 rounded-md hover:bg-white/10 transition-colors"
               >
                 Register Now
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
