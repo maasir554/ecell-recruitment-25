@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+
 import RecruitmentCard from "@/components/recruitment-card"
 
 import AboutSection from "@/components/about-us"
-import Footer from "@/components/footer"
+
 import TeamGlimpse from "@/components/team-glimpse"
 
 
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl space-y-6">
-            <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+            <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               Join the <span className="text-primary">Entrepreneurship Cell</span>
             </h1>
             <p className="font-roboto text-lg text-white/90 max-w-xl">
@@ -254,11 +254,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      
-
-      {/* Footer */}
-      <Footer />
     </main>
   )
 }

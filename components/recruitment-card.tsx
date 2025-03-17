@@ -24,7 +24,12 @@ export default function RecruitmentCard({ title, logo, description, applyLink }:
         className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${isFlipped ? "rotate-y-180" : ""}`}
       >
         {/* Front of card - only logo and title */}
-        <div className="absolute w-full h-full backface-hidden glassmorphism rounded-xl flex flex-col items-center justify-center p-6 border border-white/20">
+        <div 
+        
+        className={"absolute w-full h-full backface-hidden glassmorphism rounded-xl flex flex-col items-center justify-center p-6 border border-white/20" 
+                  
+                  }
+        >
   {logo ? (
     <img 
       src={logo} 
@@ -38,12 +43,14 @@ export default function RecruitmentCard({ title, logo, description, applyLink }:
       className="mb-6 object-contain w-48 h-48" 
     />
   )}
-  <h3 className="font-montserrat text-xl font-bold text-white mb-2">{title}</h3>
-  <p className="font-inter text-white/70 text-sm">Hover to learn more</p>
+  <div className="flex flex-col items-center p-4">
+    <h3 className="font-montserrat text-xl font-bold text-white mb-2">{title}</h3>
+    <p className="font-inter text-white/70 text-sm">Hover to learn more</p>
+  </div>
 </div>
 
         {/* Back of card - description and apply button */}
-        <div className="absolute w-full h-full backface-hidden glassmorphism rounded-xl flex flex-col p-6 rotate-y-180 border border-white/20">
+        <div className="absolute w-full h-full backface-hidden bg-black/20 backdrop-blur-lg rounded-xl flex flex-col p-6 rotate-y-180 border border-white/20">
           <h3 className="font-montserrat text-xl font-bold text-white mb-4">{title}</h3>
           <p className="font-roboto text-white flex-grow mb-6">{description}</p>
           <Link

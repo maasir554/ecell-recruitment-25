@@ -12,6 +12,8 @@ import { Navbar } from "@/components/navbar";
 import Image from "next/image";
 import NextLink from "next/link";
 
+import Footer from "@/components/footer";
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -50,7 +52,8 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            
+            {/* Footer */}
+            <Footer />
           </div>
         </Providers>
       </body>

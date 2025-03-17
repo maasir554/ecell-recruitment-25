@@ -274,8 +274,8 @@ export default function Page() {
             More about you
           </h3>
           <span className="text-sm text-default-500">
-            Let us know about your skills, and why you want to be a part of
-            Entrepreneurship Cell.
+            {`Let us know about your skills, and why you want to be a part of
+            Entrepreneurship Cell.`}
           </span>
         </div>
 
