@@ -15,7 +15,7 @@ export default function Home() {
       
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center bg-gradient-to-b from-yellow-500/10 to-indigo-500/10 md:from-transparent">
+      <section className="relative h-screen flex items-center bg-gradient-to-b from-yellow-500/10 via-transparent to-indigo-500/10 md:from-transparent">
         <div className="absolute z-0 w-full">
           <Image
             src="/team/hero.jpg"
