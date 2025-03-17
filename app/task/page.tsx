@@ -1,7 +1,7 @@
 export default function Page(){
     return(
         <>
-            page for task submission
+            Tasks to be submitted on vertical-wise forms.
         </>
     )
 }

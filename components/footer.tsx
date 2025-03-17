@@ -3,10 +3,6 @@ import Link from "next/link";
 import NextLink from "next/link";
 import Image from "next/image";
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
   Mail,
   Phone,
   MapPin,

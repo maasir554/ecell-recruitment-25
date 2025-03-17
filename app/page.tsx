@@ -7,7 +7,7 @@ import AboutSection from "@/components/about-us"
 
 import TeamGlimpse from "@/components/team-glimpse"
 
-
+import { cn } from "@/lib/utils"
 
 export default function Home() {
   return (
@@ -21,11 +21,11 @@ export default function Home() {
             src="/team/hero.jpg"
             alt="E-Cell Background"
             fill
-            className="object-cover brightness-50"
+            className={cn("[mask-image:linear-gradient(270deg,transparent_0%,white_10%,white_90%,transparent_100%),linear-gradient(0deg,transparent_0%,rgb(220,220,220)_30%,rgb(220,220,220)_70%,transparent_100%),radial-gradient(circle,white_75%,transparent_90%)]","[mask-composite:intersect]","object-cover brightness-50")}
             priority
           />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className={"container mx-auto px-4 relative z-10"}>
           <div className="max-w-2xl space-y-6">
             <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               Join the <span className="text-primary">Entrepreneurship Cell</span>
