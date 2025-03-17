@@ -9,6 +9,8 @@ import TeamGlimpse from "@/components/team-glimpse"
 
 import { cn } from "@/lib/utils"
 
+import { LuArrowUpRight } from "react-icons/lu";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -39,17 +41,23 @@ export default function Home() {
             </p>
             <div className="flex gap-4">
               <Link
+                href="/apply"
+                className="rounded-full text-sm md:text-lg h-min py-2 md:py-3 px-4 sm:px-6 md:px-8 bg-[#956013] border-3 border-[#956013] text-white  font-bold flex justify-center items-center gap-2 hover:opacity-90"
+              >
+                Apply now <LuArrowUpRight/>
+              </Link>
+              <Link
                 href="#recruitment"
-                className="font-inter bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition-colors"
+                className="rounded-full text-sm md:text-lg h-min py-2 md:py-3 px-4 sm:px-6 md:px-8 bg-transparent text-white border-3 border-white font-bold flex justify-center items-center hover:opacity-95"
               >
                 Explore Roles
               </Link>
-              <Link
+              {/* <Link
                 href="#apply"
                 className="font-inter border border-white text-white px-6 py-3 rounded-md hover:bg-white/10 transition-colors"
               >
                 Register Now
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
