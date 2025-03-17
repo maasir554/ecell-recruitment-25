@@ -5,7 +5,7 @@ import RecruitmentCard from "@/components/recruitment-card"
 
 import AboutSection from "@/components/about-us"
 
-import TeamGlimpse from "@/components/team-glimpse"
+import {TeamMarquee} from "@/components/team-glimpse"
 
 import { cn } from "@/lib/utils"
 
@@ -248,7 +248,7 @@ export default function Home() {
             </p>
           </div>
 
-          <TeamGlimpse />
+          <TeamMarquee />
         </div>
       </section>
 
