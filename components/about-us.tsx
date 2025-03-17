@@ -52,7 +52,7 @@ export default function AboutSection() {
             <iframe
               width="100%"
               height="100%"
-              src="https://youtu.be/ZesEJmDMlZI?si=GqXShHXa64yIZNG_"
+              src="https://www.youtube.com/embed/ZesEJmDMlZI?autoplay=1"
               title="E-Cell NIT Bhopal Introduction"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
