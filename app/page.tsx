@@ -158,7 +158,7 @@ export default function Home() {
                 <div>
                   
                   <p className="font-roboto text-white/80">
-                  {`Only First year B.Tech/B.Arch/B.plan from MANIT can apply for the recruitment process`}
+                  {`Only First year B.Tech/B.Arch/B.plan students from MANIT can apply for the recruitment process`}
                   </p>
                 </div>
               </li>
