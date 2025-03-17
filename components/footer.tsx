@@ -1,7 +1,19 @@
-import Link from "next/link"
-import NextLink from "next/link"
-import Image from "next/image"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+"use client";
+import Link from "next/link";
+import NextLink from "next/link";
+import Image from "next/image";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { siteConfig } from "@/config/site";
 
 export default function Footer() {
   return (
@@ -30,27 +42,39 @@ export default function Footer() {
                 <p className="text-xs text-neutral-200">MANIT, Bhopal</p>
               </span>
             </NextLink>
-              <p className="font-roboto text-white/70 text-sm">
-                {`Fostering innovation and entrepreneurship among students.`}
-              </p>
-              <div className="flex gap-4">
-                <Link href="https://www.facebook.com/ecellnitbhopal" className="text-white/70 hover:text-primary transition-colors">
-                  <Facebook className="h-5 w-5" />
-                  <span className="sr-only">Facebook</span>
-                </Link>
-                <Link href="https://x.com/ecell_nitb" className="text-white/70 hover:text-primary transition-colors">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Link>
-                <Link href="https://www.instagram.com/ecell_nitb/" className="text-white/70 hover:text-primary transition-colors">
-                  <Instagram className="h-5 w-5" />
-                  <span className="sr-only">Instagram</span>
-                </Link>
-                <Link href="https://www.linkedin.com/company/ecell-manit/posts/?feedView=all" className="text-white/70 hover:text-primary transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Link>
-              </div>
+            <p className="font-roboto text-white/70 text-sm">
+              {`Fostering innovation and entrepreneurship among students.`}
+            </p>
+            <div className="flex gap-4">
+              <Link
+                aria-label="Linkedin"
+                href={siteConfig.links.linkedin}
+                target="_blank"
+              >
+                <FaLinkedin className="text-default-500 text-2xl" />
+              </Link>
+              <Link
+                aria-label="Instagram"
+                href={siteConfig.links.instagram}
+                target="_blank"
+              >
+                <FaInstagram className="text-default-500 text-2xl" />
+              </Link>
+              <Link
+                aria-label="Twitter"
+                href={siteConfig.links.twitter}
+                target="_blank"
+              >
+                <FaXTwitter className="text-default-500 text-2xl" />
+              </Link>
+              <Link
+                aria-label="Facebook"
+                href={siteConfig.links.facebook}
+                target="_blank"
+              >
+                <FaFacebook className="text-default-500 text-2xl" />
+              </Link>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -58,27 +82,42 @@ export default function Footer() {
             <h3 className=" text-lg font-bold text-white mb-2">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/#about" className="font-inter text-white/70 hover:text-primary transition-colors">
+                <Link
+                  href="/#about"
+                  className="font-inter text-white/70 hover:text-primary transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/#recruitment" className="font-inter text-white/70 hover:text-primary transition-colors">
+                <Link
+                  href="/#recruitment"
+                  className="font-inter text-white/70 hover:text-primary transition-colors"
+                >
                   Verticals
                 </Link>
               </li>
               <li>
-                <Link href="/#events" className="font-inter text-white/70 hover:text-primary transition-colors">
+                <Link
+                  href="/#events"
+                  className="font-inter text-white/70 hover:text-primary transition-colors"
+                >
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/#rules" className="font-inter text-white/70 hover:text-primary transition-colors">
+                <Link
+                  href="/#rules"
+                  className="font-inter text-white/70 hover:text-primary transition-colors"
+                >
                   Rules
                 </Link>
               </li>
               <li>
-                <Link href="/apply" className="font-inter text-white/70 hover:text-primary transition-colors">
+                <Link
+                  href="/apply"
+                  className="font-inter text-white/70 hover:text-primary transition-colors"
+                >
                   Apply Now
                 </Link>
               </li>
@@ -117,7 +156,7 @@ export default function Footer() {
                     href="tel:+917607476106"
                     className="font-roboto hover:text-primary transition-colors"
                   >
-                   {`Sannidhya Srivastava: +91 76074 76106`}
+                    {`Sannidhya Srivastava: +91 76074 76106`}
                   </Link>
                   <Link
                     href="tel:+919479606424"
@@ -129,7 +168,7 @@ export default function Footer() {
                     href="tel:+918817263318"
                     className="font-roboto hover:text-primary transition-colors"
                   >
-                   {` Dev Bansal: +91 88172 63318`}
+                    {` Dev Bansal: +91 88172 63318`}
                   </Link>
                 </div>
               </li>
@@ -139,11 +178,11 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="font-inter text-xs text-white/70">
-            Copyright &copy; {new Date().getFullYear()}{":"} {`Entrepreneurship Cell NIT Bhopal. All rights reserved.`}
+            Copyright &copy; {new Date().getFullYear()}
+            {":"} {`Entrepreneurship Cell NIT Bhopal. All rights reserved.`}
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
