@@ -256,8 +256,8 @@ export default function Home() {
       <section id="team" className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="mb-3 text-4xl sm:text-5xl md:text-6xl text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#362e1a]">Team Glimpse</h2>
-            <p className=" text-sm sm:text-base md:text-lg text-white max-w-2xl mx-auto">
+            <h2 className="mb-5 text-4xl sm:text-5xl md:text-6xl text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#362e1a]">Team Glimpse</h2>
+            <p className=" text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto">
               {`Meet the passionate individuals who make E-Cell NIT Bhopal a thriving community.`}
             </p>
           </div>
