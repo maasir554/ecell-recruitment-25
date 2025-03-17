@@ -76,7 +76,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-4">Join Our <span className="text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#615844]">Team</span></h2>
-            <p className="font-roboto text-lg text-white max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-white max-w-2xl mx-auto backdrop-blur-sm">
               {`We're looking for passionate individuals to join various teams at E-Cell NIT Bhopal. Hover over the cards
               to learn more about each role.`}
             </p>
