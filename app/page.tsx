@@ -36,7 +36,7 @@ export default function Home() {
           <div className="max-w-2xl space-y-6">
             <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
               Join the<br/> 
-              <span className="text-primary">Entrepreneurship Cell</span>
+              <span className="text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#dfa542] via-[#a37333] to-[#574b31]">Entrepreneurship Cell</span>
             </h1>
               <p className="font-inter text-sm sm:text-base text-white font-light max-w-xl">
               Be a part of the most vibrant community at NIT Bhopal. We nurture innovation, entrepreneurship, and
