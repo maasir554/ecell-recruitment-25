@@ -12,7 +12,7 @@ const teamImages = [
   { id: 5, image: "/team/hero.jpg" },
   { id: 6, image: "/team/sac1.jpg" },
   { id: 7, image: "/team/sac2.jpg" },
-  { id: 8, image: "/team/f1.jpg" },
+  { id: 8, image: "/team/hero.jpg" },
   { id: 9, image: "/team/san1.jpg" },
   { id: 10, image: "/team/san2.jpg" },
   { id: 11, image: "/team/san3.jpg" },
