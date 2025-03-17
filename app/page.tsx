@@ -74,38 +74,38 @@ export default function Home() {
               logo="/verticals/em.png"
               description="Event Managers at E-Cell oversee event planning, promotion, and execution. They develop PR strategies, manage social media, handle press releases, coordinate promotions, and build stakeholder relationships. Their goal is to ensure events are well-organized, widely publicized, and effectively engage the target audience. 
 "
-              applyLink="#apply"
+              applyLink="/apply"
             />
             <RecruitmentCard
               title="Sponsorship Executives"
               logo="/verticals/spons.png"
               description="Sponsorship Executives secure funding and partnerships for E-Cell events. They identify potential sponsors, craft tailored proposals, and negotiate agreements. Working closely with the team, they ensure partnerships align with both parties’ goals, supporting E-Cell’s initiatives through strategic collaborations."
-              applyLink="#apply"
+              applyLink="/apply"
             />
             <RecruitmentCard
               title="Content Writers"
               logo="/verticals/cw_1.png"
               description="Content Writers at E-Cell create engaging content for the website, social media, emails, brochures, and press releases. They align messaging with communication goals and collaborate with teams to ensure content is tailored, impactful, and effectively reaches the target audience."
-              applyLink="#apply"
+              applyLink="/apply"
             />
             <RecruitmentCard
               title="Designers"
               logo="/verticals/des.png"
               description="Designers at E-Cell create posters, brochures, event booths, and websites, ensuring a visually appealing and cohesive brand identity. They align all visual elements with E-Cell’s branding and communication goals, maintaining consistency across digital and print materials."
-              applyLink="#apply"
+              applyLink="/apply"
             />
             <RecruitmentCard
               title="Video Editors"
               logo="/verticals/ve.png"
               description="Video Editors at E-Cell create and edit videos for the website and social media, including the E-Summit aftermovie. They ensure high-quality, engaging content that aligns with E-Cell’s branding, capturing key moments and showcasing the essence of its events."
-              applyLink="#apply"
+              applyLink="/apply"
             />
             <RecruitmentCard
               title="Web Developers"
               logo="/verticals/webd.png"
               description="Web Developers at E-Cell are responsible for creating and maintaining the websites for various events and the official E-Cell website. Web Developers work closely with other team members, including content writers and designers, to ensure the website aligns with the team's goals and objectives.
 "
-              applyLink="#apply"
+              applyLink="/apply"
             />
           </div>
         </div>
