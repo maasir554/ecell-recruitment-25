@@ -27,9 +27,9 @@ export default function Home() {
             priority
           />
         </div>
-        <div className={"container mx-auto px-6 relative z-10"}>
-          <div className="max-w-2xl space-y-6 -translate-y-1/2">
-            <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+        <div className={"container mx-auto px-6 md:px-16 relative z-10 -translate-y-1/2"}>
+          <div className="max-w-2xl space-y-6">
+            <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
               Join the<br/> 
               <span className="text-primary">Entrepreneurship Cell</span>
             </h1>
