@@ -66,7 +66,7 @@ export default function Page() {
   const [v2, setV2] = useState<string>("");
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+    <main className="relative min-h-screen flex flex-col items-center justify-center gap-4 px-6 py-8 md:py-10 ">
       <GridPattern 
       width={15} height={15} x={7} y={7} 
       strokeDasharray="4 1"
