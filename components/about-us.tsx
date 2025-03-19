@@ -10,15 +10,11 @@ export default function AboutSection() {
     <div className="container mx-auto px-4">
       
       <div className="text-center mb-16">
-        <h2 className="text-center mb-6 overflow-visible z-10 py-2 text-2xl sm:text-5xl flex gap-3 flex-wrap justify-center items-center font-bold">
-          
-        
+        <h2 className="text-center mb-6 overflow-visible z-10 py-2 flex flex-col gap-2 flex-wrap justify-center items-center">
           <span className="text-5xl sm:text-6xl text-transparent font-extrabold  bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#362e1a]">
             {`About`}
           </span>
-          
-        
-          <span >
+          <span className="text-2xl sm:text-3xl font-bold text-neutral-300">
             {`E-Cell NIT Bhopal`}
           </span>
         
@@ -64,13 +60,13 @@ export default function AboutSection() {
 
         {/* Text Content */}
         <div className="space-y-6">
-          <h3 className="font-montserrat text-2xl font-bold text-[#956013]">Our Mission</h3>
+          <h3 className="font-montserrat text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#615844]">Our Mission</h3>
           <p className="font-roboto text-white">
           {`Entrepreneurship Cell MANIT Bhopal is a student-run voluntary organization aimed at fostering a dynamic startup culture within the student community and creating a thriving entrepreneurial ecosystem. E-Cell provides an exceptional platform to develop key skills and transform innovative ideas into successful ventures. 
 `}
           </p>
 
-          <h3 className="font-montserrat text-2xl font-bold text-[#956013]">What We Do?</h3>
+          <h3 className="font-montserrat text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#e09a4f] to-[#615844]">What We Do?</h3>
           <p className="font-roboto text-white">
           {`Through prominent events like E-Summit and Pe-Charcha, it organizes engaging competitions that challenge creativity, along with expert-led sessions that lay the groundwork for shaping the aspiring entrepreneurial minds. 
         `}

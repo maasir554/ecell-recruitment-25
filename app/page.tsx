@@ -32,6 +32,7 @@ export default function Home() {
             priority
           />
         </div>
+
         <div className={"container mx-auto px-6 md:px-16 relative z-10 -translate-y-1/2"}>
           <div className="max-w-2xl space-y-6">
             <h1 className="font-montserrat+ text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
@@ -67,7 +68,10 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24 bg-black">
+      <section 
+      id="about" 
+      className= "py-16 md:py-24 bg-black"
+      >
         <AboutSection />
       </section>
 
