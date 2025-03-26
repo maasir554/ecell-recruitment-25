@@ -72,7 +72,14 @@ export default function Page() {
       strokeDasharray="4 1"
       className={cn("[mask-image:linear-gradient(266deg,transparent_0%,white_40%,white_60%,transparent_100%),radial-gradient(circle,white_45%,transparent_90%)]","[mask-composite:intersect]", "fill-red-600 stroke-yellow-300/20")}
       />
-      {!submitted ? (
+      <h1 className="pt-8 text-5xl sm:text-6xl font-extrabold  text-center mb-10 overflow-visible h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
+          {`Time's up!`}
+      </h1>
+      <h2 className="text-neutral-200 text-center text-sm w-4/5">
+            {`Registrations for the annual recruitment drive '25 are closed.`}
+      </h2>
+      
+      {/* {!submitted ? (
         <>
           <h1 className="pt-8 text-5xl sm:text-6xl font-extrabold  text-center mb-10 overflow-visible h-[100px] text-transparent bg-clip-text bg-gradient-to-b from-[#fdba74] to-[#49402b]">
             Apply now
@@ -332,18 +339,8 @@ export default function Page() {
             {`Submitting your response...`}
           </span>
         </div>
-      )}
-
-      {/* {submitted && (
-        <div className="text-small flex flex-col w-full justify-center">
-          You submitted: 
-          {Object.entries(submitted).map(([key, value]) => (    
-            <span key={key} className="text-sm text-neutral-200">
-              {key}: {value as string}
-            </span>
-            ))}
-        </div>
       )} */}
+
     </main>
   );
 }
